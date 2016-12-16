@@ -1,0 +1,80 @@
+body {
+	background: url(../images/ae.jpg) repeat top left;
+	background-attachment: fixed;
+	color: #bec4c9;
+	font-family: "Open Sans", Helvetica, sans-serif;
+	margin: 0 0 1em 0;
+	width: 100%;
+}
+
+div {
+	background-color: #4a525a;
+	border: 2px solid white;
+	border-radius: 10px;
+	display: inline-block;
+	margin-bottom: 1em;
+	padding: 1em;
+	vertical-align: top;
+	width: 400px;
+}
+
+/*
+ * using "display: inline-block" on div would make divs
+ * on the same line align bottom by default.
+ *
+ * adding "vertical-align: top;" make them align at the top.
+ */
+
+#header {
+	background-color: rgba(74, 82, 90, 0.9);
+	border: none;
+	border-radius: 0;
+	display: block;
+	height: 5.5em;
+	position: fixed;
+	text-align: center;
+	width: 100%;
+}
+
+
+#main {
+	background: none;
+	border: none;
+	display: block;
+	margin: 0 auto;
+	padding-top: 9em;
+	width: 900px;
+}
+/*
+ * need to reset the display property back to block for #main div
+ * otherwise "margin: 0 auto" won't work as expected. Inline elements
+ * don't have left margin.
+ *
+ * padding-top = height + padding-top + padding bottom of #header div
+ * used em as measurement unit to adapt for font-size change.
+ */
+
+
+div[class*="selector"] {
+	border-top-color: #00c853;
+	border-top-width: 4px;
+}
+
+div.color {
+	border-top-color: #d81b60;
+	border-top-width: 4px;
+}
+
+div > h4 {
+	color: white;
+	margin-top: 0;
+}
+
+div[class*="css3"]  {
+	background: #4a525a url(../images/css3-512.png) no-repeat top left;
+	background-size: 1.5em;
+}
+
+div[class*="css3"] > h4 {
+	padding-left: .5em;
+}
